@@ -1,0 +1,11 @@
+{
+	"id": "deepflow",
+	"name": "DeepFlow",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "A native-feeling Pomodoro timer plugin for focused work sessions with session tracking and minimal UI.",
+	"author": "Alejandro Ponce",
+	"authorUrl": "",
+	"fundingUrl": "",
+	"isDesktopOnly": false
+} 
