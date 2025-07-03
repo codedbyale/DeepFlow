@@ -172,7 +172,8 @@ export class DeepFlowView extends ItemView {
 		const progressBar = this.statusEl.querySelector('.deepflow-progress-bar') as HTMLElement;
 		if (progressBar) {
 			const progress = ((status.totalTime - status.timeLeft) / status.totalTime) * 100;
-			progressBar.style.width = `${Math.min(progress, 100)}%`;
+			const clampedProgress = Math.min(progress, 100);
+			progressBar.style.setProperty('--progress-width', `${clampedProgress}%`);
 		}
 
 		// Update button states
@@ -196,20 +197,20 @@ export class DeepFlowView extends ItemView {
 	private updateButtonStates(state: TimerState): void {
 		switch (state) {
 			case TimerState.IDLE:
-				this.startBtn.style.display = 'inline-block';
-				this.pauseBtn.style.display = 'none';
+				this.startBtn.removeClass('deepflow-btn-hidden');
+				this.pauseBtn.addClass('deepflow-btn-hidden');
 				this.resetBtn.disabled = false;
 				this.skipBtn.disabled = false;
 				break;
 			case TimerState.RUNNING:
-				this.startBtn.style.display = 'none';
-				this.pauseBtn.style.display = 'inline-block';
+				this.startBtn.addClass('deepflow-btn-hidden');
+				this.pauseBtn.removeClass('deepflow-btn-hidden');
 				this.resetBtn.disabled = false;
 				this.skipBtn.disabled = false;
 				break;
 			case TimerState.PAUSED:
-				this.startBtn.style.display = 'inline-block';
-				this.pauseBtn.style.display = 'none';
+				this.startBtn.removeClass('deepflow-btn-hidden');
+				this.pauseBtn.addClass('deepflow-btn-hidden');
 				this.resetBtn.disabled = false;
 				this.skipBtn.disabled = false;
 				break;
@@ -290,7 +291,7 @@ export class DeepFlowView extends ItemView {
 			.deepflow-progress-bar {
 				height: 100%;
 				background-color: var(--interactive-accent);
-				width: 0%;
+				width: var(--progress-width, 0%);
 				transition: width 0.3s ease;
 			}
 
@@ -334,6 +335,10 @@ export class DeepFlowView extends ItemView {
 			.deepflow-btn:disabled {
 				opacity: 0.5;
 				cursor: not-allowed;
+			}
+
+			.deepflow-btn-hidden {
+				display: none !important;
 			}
 
 			.deepflow-stats {

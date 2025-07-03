@@ -83,7 +83,7 @@ export default class DeepFlowPlugin extends Plugin {
 
 		this.addCommand({
 			id: 'open-deepflow-view',
-			name: 'Open DeepFlow',
+			name: 'Open Timer',
 			callback: () => this.activateView(),
 		});
 
