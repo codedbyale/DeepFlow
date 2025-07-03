@@ -5,7 +5,7 @@
 	"minAppVersion": "0.15.0",
 	"description": "A native-feeling Pomodoro timer plugin for focused work sessions with session tracking and minimal UI.",
 	"author": "Alejandro Ponce",
-	"authorUrl": "",
-	"fundingUrl": "",
+	"authorUrl": "https://github.com/codedbyale",
+	"fundingUrl": "https://buymeacoffee.com/alejandroponce",
 	"isDesktopOnly": false
 } 

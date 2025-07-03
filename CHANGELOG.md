@@ -5,7 +5,7 @@ All notable changes to the DeepFlow plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2024-01-XX
+## [1.0.0] - 2025-07-03
 
 ### Added
 - 🍅 Complete Pomodoro timer implementation
@@ -15,8 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 📊 Comprehensive session tracking and statistics
 - 📈 Daily, weekly, monthly, and yearly progress views
 - 🔔 Obsidian notifications and system notifications
-- ⏰ **Status bar timer** - Live countdown display with native Lucide icons (play, pause, coffee, check)
-- ⏰ **Ribbon icon** - Native timer icon in the left ribbon using Obsidian's built-in icon system
+- ⏰ Status bar timer - Live countdown display with native Lucide icons (play, pause, coffee, check)
+- ⏰ Ribbon icon - Native timer icon in the left ribbon using Obsidian's built-in icon system
 - ⚙️ Full settings customization
 - 💾 Local data persistence using Obsidian's storage
 - 📤 CSV export functionality
